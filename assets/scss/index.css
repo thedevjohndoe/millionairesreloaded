@@ -1,0 +1,675 @@
+*,
+*::before,
+*::after {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-BoldItalic.woff2") format("woff2"), url("../../static/fonts/Barlow-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-Black.woff2") format("woff2"), url("../../static/fonts/Barlow-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-ExtraBoldItalic.woff2") format("woff2"), url("../../static/fonts/Barlow-ExtraBoldItalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-BlackItalic.woff2") format("woff2"), url("../../static/fonts/Barlow-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("Barlow-ExtraBold.woff2") format("woff2"), url("Barlow-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-Regular.woff2") format("woff2"), url("../../static/fonts/Barlow-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-SemiBoldItalic.woff2") format("woff2"), url("../../static/fonts/Barlow-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-Bold.woff2") format("woff2"), url("../../static/fonts/Barlow-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-Medium.woff2") format("woff2"), url("../../static/fonts/Barlow-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-SemiBold.woff2") format("woff2"), url("../../static/fonts/Barlow-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-MediumItalic.woff2") format("woff2"), url("../../static/fonts/Barlow-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-Italic.woff2") format("woff2"), url("../../static/fonts/Barlow-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-ExtraLightItalic.woff2") format("woff2"), url("../../static/fonts/Barlow-ExtraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-LightItalic.woff2") format("woff2"), url("../../static/fonts/Barlow-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-Light.woff2") format("woff2"), url("../../static/fonts/Barlow-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-Thin.woff2") format("woff2"), url("../../static/fonts/Barlow-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-ExtraLight.woff2") format("woff2"), url("../../static/fonts/Barlow-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../../static/fonts/Barlow-ThinItalic.woff2") format("woff2"), url("../../static/fonts/Barlow-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+.form {
+  width: 100%;
+  padding-top: 30px;
+}
+
+.form .input {
+  margin-bottom: 20px;
+}
+
+.form .input .input__group {
+  margin-bottom: 20px;
+}
+
+.form .form__group {
+  margin-bottom: 20px;
+}
+
+.form .form__label {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form .form__control {
+  width: 100%;
+  border: 1px solid gainsboro;
+  display: block;
+  padding: 1.2rem;
+}
+
+.table {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.table .table__header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.table .table__header th {
+  text-align: left;
+}
+
+.table .table__header .table__column {
+  padding: 5px;
+  font-weight: 700;
+}
+
+.table .table__row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.table .table__row .table__column {
+  padding: 5px;
+}
+
+input,
+button,
+select,
+textarea {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 1.4rem 2.2rem;
+}
+
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+  font-family: inherit;
+}
+
+h1 {
+  font-size: 4.2rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 3.6rem;
+  font-weight: 400;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.5;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: sans-serif;
+  color: #36454f;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+a {
+  color: goldenrod;
+  text-decoration: none;
+}
+
+.site {
+  width: 100%;
+  height: 100vh;
+}
+
+.site .site__header {
+  width: 100%;
+  height: 100px;
+}
+
+.site .site__header .header {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0px auto;
+}
+
+.login {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+
+.login h1 {
+  margin-bottom: 32px;
+}
+
+.login p {
+  margin-bottom: 22px;
+}
+
+.sales .sale__wrap {
+  width: 100%;
+  display: block;
+  border: 1px solid gainsboro;
+  margin-bottom: 40px;
+}
+
+.sales .sale__wrap .sale__header {
+  padding: 10px 20px;
+  border-bottom: 1px solid gainsboro;
+  background-color: #f9f9f9;
+}
+
+.sales .sale__wrap .sale__header p {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.sales .sale__wrap .sale__controls {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 20px;
+}
+
+.sales .sale__wrap .sale__controls .control__input {
+  width: 100%;
+  position: relative;
+}
+
+.sales .sale__wrap .sale__controls .control__input label {
+  display: inline-block;
+}
+
+.sales .sale__wrap .sale__controls .control__input input {
+  width: 100%;
+  display: block;
+  background: transparent;
+  border-bottom: 1px solid gainsboro;
+}
+
+.sales .sale__wrap .sale__controls .control__select {
+  padding-left: 20px;
+}
+
+.sales .sale__wrap .sale__controls .control__select select {
+  width: 100%;
+  display: block;
+  padding: 1.2rem;
+  background: transparent;
+  border: 1px solid gainsboro;
+}
+
+.sales .sale__wrap .sale__controls .control__button {
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .sales .sale__wrap {
+    display: block;
+  }
+  .sales .sale__wrap .sale__controls {
+    width: 100%;
+    display: block;
+  }
+  .sales .sale__wrap .sale__controls .control__input {
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+  .sales .sale__wrap .sale__controls .control__input label {
+    display: inline-block;
+  }
+  .sales .sale__wrap .sale__controls .control__input input {
+    width: 100%;
+    display: block;
+    background: transparent;
+    border-bottom: 1px solid gainsboro;
+  }
+  .sales .sale__wrap .sale__controls .control__select {
+    width: 100%;
+    display: block;
+    padding: 10px 0px;
+  }
+  .sales .sale__wrap .sale__controls .control__select select {
+    width: 100%;
+    display: block;
+    padding: 1.2rem;
+    background: transparent;
+    border-radius: 10px;
+  }
+  .sales .sale__wrap .sale__controls .control__button {
+    width: 100%;
+    display: block;
+    padding: 20px 0px;
+    background: transparent;
+  }
+  .sales .sale__wrap .sale__controls .control__button .button {
+    width: 100%;
+    display: block;
+  }
+}
+
+.alert {
+  width: 100%;
+  display: block;
+  padding: 20px;
+}
+
+.content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.content .content__navbar {
+  width: 200px;
+  height: 100vh;
+  min-width: 200px;
+  max-width: 200px;
+  padding-top: 30px;
+  position: relative;
+  background-color: #fbfbfc;
+}
+
+.content .content__navbar .rollback {
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.content .content__navbar .rollback:before, .content .content__navbar .rollback:after {
+  top: 8px;
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  background-color: goldenrod;
+  border-radius: 1px;
+}
+
+.content .content__navbar .rollback:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.content .content__navbar .rollback:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.content .content__navbar .navbar__user {
+  padding: 20px;
+}
+
+.content .content__navbar .navbar__menu .menu__item {
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.content .content__navbar .navbar__menu .menu__item .item__link {
+  padding-left: 20px;
+}
+
+.content .content__container {
+  width: 100%;
+  padding-top: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+  position: relative;
+}
+
+.content .content__container .hamburger {
+  top: 20px;
+  left: 20px;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  display: block;
+  z-index: 10;
+  position: absolute;
+}
+
+.content .content__container .hamburger span {
+  left: 0;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  background: goldenrod;
+  border-radius: 1px;
+}
+
+.content .content__container .hamburger span:nth-of-type(2) {
+  top: calc(50% - 2px);
+}
+
+.content .content__container .hamburger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.content .content__container .content__section .section__header {
+  margin-bottom: 60px;
+}
+
+.content .content__container .content__section .section__header--dashboard {
+  text-align: center;
+}
+
+.content .content__container .content__section .section__content {
+  width: 100%;
+}
+
+.content .content__container .content__section .section__content .auction-times {
+  text-align: center;
+}
+
+.content .content__container .content__section .section__content .dashboard-container {
+  margin-bottom: 40px;
+}
+
+.content .content__container .content__section .section__content .referral-container {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .container__column {
+  margin-bottom: 20px;
+}
+
+.container .container__column .column__header {
+  margin-bottom: 40px;
+  border-bottom: 1px solid gainsboro;
+}
+
+.container .container__column--dashboard {
+  padding: 40px;
+  font-size: 4.8rem;
+  font-weight: bold;
+  border: 1px solid gainsboro;
+  border-radius: 20px;
+}
+
+.container .container__column--auction {
+  padding: 40px;
+  border: 1px solid gainsboro;
+  border-radius: 20px;
+}
+
+.container .container__column--goal {
+  padding: 40px;
+  border: 1px solid goldenrod;
+  border-radius: 20px;
+}
+
+.container .container__column--bid {
+  border-bottom: 1px solid goldenrod;
+}
+
+.container .container__column--full {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100%;
+}
+
+.container .container__column--half {
+  width: calc(50% - 10px);
+}
+
+.container .container__column--quarter {
+  width: calc(25% - 10px);
+}
+
+.container:not(:first-child) {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    width: 100%;
+    display: block;
+  }
+  .content .content__navbar {
+    left: -100vw;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1000;
+    position: fixed;
+    -webkit-transition: left 700ms;
+    transition: left 700ms;
+  }
+  .content .content__navbar .navbar__menu {
+    overflow: scroll;
+  }
+  .content .content__navbar .navbar__menu .menu__item {
+    cursor: pointer;
+    margin-bottom: 20px;
+    overflow: scroll;
+  }
+  .content .content__navbar .navbar__menu .menu__item .item__link {
+    font-size: 2rem;
+    font-weight: 700;
+    padding-left: 20px;
+  }
+  .content .content__navbar--active {
+    left: 0;
+  }
+  .content .content__container {
+    width: 100%;
+    padding: 20px;
+    padding-top: 40px;
+  }
+  .container {
+    width: 100%;
+    display: block;
+  }
+  .container .container__column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .container .container__column--full,
+  .container .container__column--half,
+  .container .container__column--thrid,
+  .container .container__column--quarter,
+  .container .container__column--dashboard {
+    width: 100%;
+    display: block;
+  }
+}
+/*# sourceMappingURL=index.css.map */

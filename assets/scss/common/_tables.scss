@@ -1,0 +1,29 @@
+.table {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 40px;
+
+    .table__header {
+        width: 100%;
+        display: flex;
+
+        th {
+            text-align: left;
+        }
+
+        .table__column {
+            padding: 5px;
+            font-weight: 700;
+        }
+    }
+
+    .table__row {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+
+        .table__column {
+            padding: 5px;
+        }
+    }
+}

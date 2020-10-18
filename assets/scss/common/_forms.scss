@@ -1,0 +1,29 @@
+.form {
+    width: 100%;
+    padding-top: 30px;
+
+    .input {
+        margin-bottom: 20px;
+
+        .input__group {
+            margin-bottom: 20px;
+        }
+    }
+
+    .form__group {
+        margin-bottom: 20px;
+    }
+
+    .form__label {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .form__control {
+        width: 100%;
+        border: 1px solid gainsboro;
+        display: block;
+        padding: 1.2rem;
+    }
+}

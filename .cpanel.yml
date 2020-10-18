@@ -1,0 +1,5 @@
+---
+    deployment:
+        tasks:
+            - export PATH=/home/globalgo/public_html/
+            - /bin/cp -r * $PATH

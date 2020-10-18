@@ -1,0 +1,19 @@
+input,
+button,
+select,
+textarea {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+}
+textarea {
+    resize: none;
+}
+.button {
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    padding: 1.4rem 2.2rem;
+}

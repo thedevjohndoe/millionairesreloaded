@@ -1,0 +1,290 @@
+.content {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+
+    .content__navbar {
+        width: 200px;
+        height: 100vh;
+        min-width: 200px;
+        max-width: 200px;
+        padding-top: 30px;
+        position: relative;
+        background-color: rgb(251, 251, 252);
+
+        .rollback {
+            top: 20px;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            position: absolute;
+        }
+        .rollback:before, .rollback:after {
+            top: 8px;
+            content:'';
+            position: absolute;
+            width: 20px;
+            height: 4px;
+            background-color:rgb(218, 165, 32);
+            border-radius: 1px;
+        }
+        .rollback:before {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            transform: rotate(45deg);
+            // left:2px;
+        }
+        .rollback:after {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            // right: 2px;
+        }
+
+        .navbar__user {
+            padding: 20px;
+        }
+
+        .navbar__menu {
+
+            .menu__item {
+                cursor: pointer;
+                margin-bottom: 20px;
+
+                .item__link {
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+
+    .content__container {
+        // width: calc(100% - 200px);
+        width: 100%;
+        padding-top: 50px;
+        padding-left: 5%;
+        padding-right: 5%;
+        position: relative;
+
+        .hamburger {
+            top: 20px;
+            left: 20px;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+            display: block;
+            z-index: 10;
+            position: absolute;
+
+            span {
+                left: 0;
+                width: 100%;
+                height: 4px;
+                position: absolute;
+                background: rgb(218, 165, 32);
+                border-radius: 1px;
+            }
+
+            span:nth-of-type(2) {
+                top: calc(50% - 2px);
+            }
+
+            span:nth-of-type(3) {
+                bottom: 0;
+            }
+        }
+
+        .content__section {
+
+            .section__header {
+                margin-bottom: 60px;
+            }
+
+            .section__header--dashboard {
+                text-align: center;
+            }
+
+            .section__content {
+                width: 100%;
+
+                .auction-times {
+                    text-align: center;
+                }
+
+                .dashboard-container {
+                    margin-bottom: 40px;
+                }
+
+                .referral-container {
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .container__column {
+        margin-bottom: 20px;
+
+        .column__header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgb(220, 220, 220);
+        }
+    }
+
+    .container__column--dashboard {
+        padding: 40px;
+        font-size: 4.8rem;
+        font-weight: bold;
+        border: 1px solid rgb(220, 220, 220);
+        border-radius: 20px;
+    }
+
+    .container__column--auction {
+        padding: 40px;
+        border: 1px solid rgb(220, 220, 220);
+        border-radius: 20px;
+    }
+
+    // .container__column--auction-self {
+    //     position: relative;
+    //     border-color: rgb(218, 165, 32);
+    // }
+
+    // .container__column--auction-self::before {
+    //     top: -1px;
+    //     right: -1px;
+    //     display: block;
+    //     content: 'OWNER';
+    //     padding: 10px 20px 13px;
+    //     z-index: -1;
+    //     line-height: 1;
+    //     font-weight: 500;
+    //     text-align: center;
+    //     position: absolute;
+    //     border-radius: 20px;
+    //     border-top-left-radius: 0px;
+    //     border-bottom-right-radius: 0px;
+    //     background: rgb(218, 165, 32);
+    //     color: rgb(255, 255, 255);
+    // }
+
+    // .container__column--auction-related {
+    //     position: relative;
+    //     border-color: rgb(116, 184, 114);
+    // }
+
+    // .container__column--auction-related::before {
+    //     top: -1px;
+    //     right: -1px;
+    //     display: block;
+    //     content: 'RELATED';
+    //     padding: 10px 20px 13px;
+    //     z-index: -1;
+    //     line-height: 1;
+    //     font-weight: 500;
+    //     text-align: center;
+    //     position: absolute;
+    //     border-radius: 20px;
+    //     border-top-left-radius: 0px;
+    //     border-bottom-right-radius: 0px;
+    //     background: rgb(116, 184, 114);
+    //     color: rgb(255, 255, 255);
+    // }
+
+    .container__column--goal {
+        padding: 40px;
+        border: 1px solid rgb(218, 165, 32);
+        border-radius: 20px;
+    }
+
+    .container__column--bid {
+        border-bottom: 1px solid rgb(218, 165, 32);
+    }
+
+    .container__column--full {
+        flex: none;
+        width: 100%;
+    }
+
+    .container__column--half {
+        width: calc(50% - 10px);
+    }
+
+    .container__column--quarter {
+        width: calc(25% - 10px);
+    }
+}
+.container:not(:first-child) {
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        width: 100%;
+        display: block;
+
+        .content__navbar {
+            left: -100vw;
+            width: 100%;
+            max-width: 100%;
+            z-index: 1000;
+            position: fixed;
+            transition: left 700ms;
+
+            .navbar__menu {
+                overflow: scroll;
+                
+                .menu__item {
+                    cursor: pointer;
+                    margin-bottom: 20px;
+                    overflow: scroll;
+    
+                    .item__link {
+                        font-size: 2rem;
+                        font-weight: 700;
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .content__navbar--active {
+            left: 0;
+        }
+
+        .content__container {
+            width: 100%;
+            padding: 20px;
+            padding-top: 40px;
+        }
+    }
+    .container {
+        width: 100%;
+        display: block;
+
+        .container__column {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .container__column--full,
+        .container__column--half,
+        .container__column--thrid,
+        .container__column--quarter,
+        .container__column--dashboard {
+            width: 100%;
+            display: block;
+        }
+    }
+}

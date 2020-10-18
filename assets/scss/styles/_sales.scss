@@ -1,0 +1,117 @@
+.sales {
+
+
+    .sale__wrap {
+        width: 100%;
+        display: block;
+        border: 1px solid rgb(220, 220, 220);
+        margin-bottom: 40px;
+
+        .sale__header {
+            padding: 10px 20px;
+            border-bottom: 1px solid rgb(220, 220, 220);
+            background-color: rgb(249, 249, 249);
+
+            p {
+                margin: 0;
+                padding: 0;
+                font-weight: 600;
+                line-height: 40px;
+            }
+        }
+
+        .sale__controls {
+            width: 100%;
+            display: flex;
+            padding: 10px 20px;
+
+            .control__input {
+                width: 100%;
+                position: relative;
+
+                label {
+                    display: inline-block;
+                }
+
+                input {
+                    width: 100%;
+                    display: block;
+                    background: transparent;
+                    border-bottom: 1px solid rgb(220, 220, 220);
+                }
+            }
+
+            .control__select {
+                padding-left: 20px;
+
+                select {
+                    width: 100%;
+                    display: block;
+                    padding: 1.2rem;
+                    background: transparent;
+                    border: 1px solid rgb(220, 220, 220);
+                }
+            }
+
+            .control__button {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sales {
+        .sale__wrap {
+            display: block;
+    
+            .sale__controls {
+                width: 100%;
+                display: block;
+        
+                .control__input {
+                    width: 100%;
+                    display: block;
+                    position: relative;
+        
+                    label {
+                        display: inline-block;
+                    }
+        
+                    input {
+                        width: 100%;
+                        display: block;
+                        background: transparent;
+                        border-bottom: 1px solid rgb(220, 220, 220);
+                    }
+                }
+        
+                .control__select {
+                    width: 100%;
+                    display: block;
+                    padding: 10px 0px;
+        
+                    select {
+                        width: 100%;
+                        display: block;
+                        padding: 1.2rem;
+                        background: transparent;
+                        border-radius: 10px;
+                    }
+                }
+        
+                .control__button {
+                    width: 100%;
+                    display: block;
+                    padding: 20px 0px;
+                    background: transparent;
+
+                    .button {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

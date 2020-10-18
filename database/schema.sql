@@ -1,0 +1,140 @@
+CREATE TABLE user (
+    ID INTEGER PRIMARY KEY AUTO_INCREMENT,
+    registered DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    firstname TEXT NOT NULL,
+    surname TEXT NOT NULL,
+    referral_code VARCHAR(7) UNIQUE NOT NULL,
+    email_address VARCHAR(100) UNIQUE NOT NULL,
+    username VARCHAR(15) UNIQUE NOT NULL,
+    password VARCHAR(32) NOT NULL,
+    phonenumber TEXT NOT NULL,
+    deleted INTEGER(1) NOT NULL DEFAULT 0,
+    modified DATETIME
+);
+
+CREATE TABLE note (
+    ID INTEGER PRIMARY KEY AUTO_INCREMENT,
+    created DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+    user_id INTEGER NOT NULL,
+    user_agent TEXT NULL,
+    cashier INTEGER(1) NOT NULL DEFAULT 0,
+    description TEXT NOT NULL,
+    origin TEXT NULL,
+    deleted INTEGER(1) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES user (ID)
+);
+
+CREATE TABLE goal (
+    ID INTEGER PRIMARY KEY AUTO_INCREMENT,
+    user_id INTEGER NOT NULL,
+    registered DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    description TEXT NOT NULL,
+    amount DOUBLE(10,2) NOT NULL DEFAULT 0.00,
+    accomplished INTEGER (1) NOT NULL DEFAULT 0,
+    deleted INTEGER(1) NOT NULL DEFAULT 0,
+    modified DATETIME,
+    FOREIGN KEY (user_id) REFERENCES user (ID)
+);
+
+CREATE TABLE term (
+    ID INTEGER PRIMARY KEY AUTO_INCREMENT,
+    duration INTEGER NOT NULL,
+    interest_rate DOUBLE(7,2) NOT NULL DEFAULT 0.00,
+    total_return DOUBLE(7,2) NOT NULL DEFAULT 0.00,
+    deleted INTEGER(1) NOT NULL DEFAULT 0
+);
+
+CREATE TABLE sale (
+    ID INTEGER PRIMARY KEY AUTO_INCREMENT,
+    user_id INTEGER NOT NULL,
+    payment_id INTEGER NOT NULL,
+    created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    allocated DOUBLE(7,2) NOT NULL DEFAULT 0.00,
+    sold DOUBLE(7,2) NOT NULL DEFAULT 0.00,
+    available DOUBLE(7,2) NOT NULL DEFAULT 0.00,
+    comment TEXT,
+    suspended INTEGER(1) NOT NULL DEFAULT 0,
+    expired INTEGER(1) NOT NULL DEFAULT 0,
+    deleted INTEGER(1) NOT NULL DEFAULT 0,
+    FOREIGN KEY (user_id) REFERENCES user (ID)
+);
+
+CREATE TABLE bid (
+    ID INTEGER PRIMARY KEY AUTO_INCREMENT,
+    user_id INTEGER NOT NULL,
+    sale_id INTEGER NOT NULL,
+    term_id INTEGER NOT NULL,
+    offer DOUBLE(7,2) NOT NULL DEFAULT 0.00,
+    interest DOUBLE(7,2) NOT NULL DEFAULT 0.00,
+    total_return DOUBLE(7,2) NOT NULL DEFAULT 0.00,
+    confirmed INTEGER(1) NOT NULL DEFAULT 0,
+    confirmation DATETIME,
+    mature INTEGER(1) NOT NULL DEFAULT 0,
+    deleted INTEGER(1) NOT NULL DEFAULT 0,
+    modified DATETIME NULL,
+    FOREIGN KEY (user_id) REFERENCES user (ID)
+);
+
+CREATE TABLE referral (
+    referrer_id INTEGER,
+    referred_id INTEGER,
+    referral_code VARCHAR(7) NOT NULL,
+    PRIMARY KEY (referrer_id, referred_id)
+);
+
+CREATE TABLE payment (
+    ID INTEGER PRIMARY KEY AUTO_INCREMENT,
+    user_id INTEGER NOT NULL,
+    created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    description TEXT NOT NULL,
+    bank_name TEXT NOT NULL,
+    account_holder TEXT NOT NULL,
+    account_type TEXT NOT NULL,
+    account_number TEXT NOT NULL,
+    deleted INTEGER(1) NOT NULL DEFAULT 0,
+    FOREIGN KEY (user_id) REFERENCES user (ID)
+);
+
+CREATE TABLE alert (
+    ID INTEGER PRIMARY KEY AUTO_INCREMENT,
+    user_id INTEGER NOT NULL,
+    created DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+    content TEXT NOT NULL,
+    seen INTEGER NOT NULL DEFAULT 0,
+    deleted INTEGER NOT NULL DEFAULT 0,
+    FOREIGN KEY (user_id) REFERENCES user (ID)
+);
+
+CREATE TABLE bonus (
+    ID INTEGER PRIMARY KEY AUTO_INCREMENT,
+    user_id INTEGER NOT NULL,
+    bid_id INTEGER NOT NULL,
+    processed DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    incentive DOUBLE(7,2) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES user (ID)
+);
+
+CREATE TABLE report (
+    ID INTEGER PRIMARY KEY AUTO_INCREMENT,
+    executed DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    description TEXT NOT NULL,
+    comment TEXT
+);
+
+CREATE TABLE relationship (
+    ID INTEGER AUTO_INCREMENT,
+    friend_a INTEGER NOT NULL,
+    friend_b INTEGER NOT NULL,
+    created DATETIME DEFAULT CURRENT_TIMESTAMP,
+    comment TEXT NULL,
+    PRIMARY KEY(ID, friend_a, friend_b)
+);
+
+CREATE TABLE message (
+    ID INTEGER PRIMARY KEY AUTO_INCREMENT,
+    created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    user_id INTEGER NOT NULL,
+    content TEXT NOT NULL,
+    seen INTEGER NOT NULL DEFAULT 0,
+    FOREIGN KEY (user_id) REFERENCES user (ID)
+);
