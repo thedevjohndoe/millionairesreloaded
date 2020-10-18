@@ -64,12 +64,12 @@ function generate_reset_token() {
 
 function generate_reset_address($token = NULL) {
     if(!$token) return;
-    $address = "https://globalgoaldiggers.co.za/login.php?action=reset-password&reset_token=$token";
+    $address = "https://millionairesreloaded.co.za/login.php?action=reset-password&reset_token=$token";
     return $address;
 }
 
 function generate_verification_address($key = NULL) {
     if(!$key) return;
-    $address = "https://globalgoaldiggers.co.za/login.php?action=verify&key=$key";
+    $address = "https://millionairesreloaded.co.za/login.php?action=verify&key=$key";
     return $address;
 }
