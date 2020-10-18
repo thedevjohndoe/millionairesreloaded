@@ -181,27 +181,27 @@ login_header();
     <div class="input">
         <div class="input__group">
             <label class="form__label">Name</label>
-            <input type="text" class="form__control" name="firstname" placeholder="First Name">
+            <input type="text" class="form__control" name="firstname" placeholder="First Name" required>
         </div>
         <div class="input__group">
             <label class="form__label">Surname</label>
-            <input type="text" class="form__control" name="surname" placeholder="Last Name">
+            <input type="text" class="form__control" name="surname" placeholder="Last Name" required>
         </div>
         <div class="input__group">
             <label class="form__label">Email</label>
-            <input type="email" class="form__control" name="email_address" placeholder="Email Address">
+            <input type="email" class="form__control" name="email_address" placeholder="Email Address" required>
         </div>
         <div class="input__group">
             <label class="form__label">Mobile</label>
-            <input type="text" class="form__control" name="phonenumber" placeholder="Mobile Phone Number">
+            <input type="text" class="form__control" name="phonenumber" placeholder="Mobile Phone Number" required minlength="10" maxlength="10">
         </div>
         <div class="input__group">
             <label class="form__label">Username</label>
-            <input type="text" class="form__control" name="username" placeholder="Username">
+            <input type="text" class="form__control" name="username" placeholder="Username" required>
         </div>
         <div class="input__group">
             <label class="form__label">Password</label>
-            <input type="password" class="form__control" name="password" placeholder="Account Password">
+            <input type="password" class="form__control" name="password" placeholder="Account Password" required>
         </div>
         <div class="input__group">
             <label class="form__label">Referral Code</label>
@@ -339,7 +339,7 @@ login_header();
     <div class="input">
         <div class="input__group">
             <label class="form__label">Email</label>
-            <input type="text" class="form__control" name="email_address" placeholder="Email Address">
+            <input type="text" class="form__control" name="email_address" placeholder="Email Address" required>
         </div>
     </div>
     <div class="form__group">
@@ -414,13 +414,13 @@ login_header();
     <div class="input">
         <div class="input__group">
             <label class="form__label">New Password</label>
-            <input type="password" class="form__control" name="new_password" placeholder="New Account Password">
+            <input type="password" class="form__control" name="new_password" placeholder="New Account Password" required>
         </div>
     </div>
     <div class="input">
         <div class="input__group">
             <label class="form__label">Confirm Password</label>
-            <input type="password" class="form__control" name="confirm_password" placeholder="Confirm New Password">
+            <input type="password" class="form__control" name="confirm_password" placeholder="Confirm New Password" required>
         </div>
     </div>
     <div class="form__group">
@@ -504,7 +504,7 @@ login_header();
     <div class="input">
         <div class="input__group">
             <label class="form__label">Email</label>
-            <input type="text" class="form__control" name="email_address" placeholder="Email Address">
+            <input type="email" class="form__control" name="email_address" placeholder="Email Address" required>
         </div>
     </div>
     <div class="form__group">
@@ -638,11 +638,11 @@ login_header();
     <div class="input">
         <div class="input__group">
             <label class="form__label">Username</label>
-            <input type="text" class="form__control" name="username" placeholder="Username">
+            <input type="text" class="form__control" name="username" placeholder="Username" required>
         </div>
         <div class="input__group">
             <label class="form__label">Password</label>
-            <input type="password" class="form__control" name="password" placeholder="Account Password">
+            <input type="password" class="form__control" name="password" placeholder="Account Password" required>
         </div>
     </div>
     <div class="form__group">
