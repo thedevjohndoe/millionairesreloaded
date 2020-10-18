@@ -115,12 +115,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     $mail->Subject = "Verify Your Email Address";
                                     $mail->Body = "
                                     <p>Hey $firstname,</p>
-                                    <p>Thank you for signing up with Global Goal Diggers&dash;your number 1 coin mining platform.</p>
+                                    <p>Thank you for signing up with Millionaires Reloaded - your number 1 coin mining platform.</p>
                                     <p>To complete your registration, click on the link below to verify your account:</p>
                                     <p><a href=\"$verification_address\">$verification_address</a></p>
                                     <p>You can copy and copy the link onto your browser's address bar.</p>
                                     <p>Regards,<br/>
-                                    The Global Goal Diggers Team</p>";
+                                    The Millionaires Reloaded Team</p>";
 
                                     try {
                                         $mail->send();
@@ -305,12 +305,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $mail->Subject = "Verify Your Email Address";
                 $mail->Body = "
                 <p>Hey $firstname,</p>
-                <p>Thank you for signing up with Global Goal Diggers&dash;your number 1 coin mining platform.</p>
+                <p>Thank you for signing up with Millionaires Reloaded your number 1 coin mining platform.</p>
                 <p>To complete your registration, click on the link below to verify your account:</p>
                 <p><a href=\"$verification_address\">$verification_address</a></p>
                 <p>You can copy and paste the link onto your browser's address bar.</p>
                 <p>Regards,<br/>
-                The Global Goal Diggers Team</p>";
+                The Millionaires Reloaded Team</p>";
 
                 try {
                     $mail->send();
@@ -467,7 +467,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <p>We have received a request to reset your password.</p>
                     <p>Go to <a href=\"$reset_address\">$reset_address</a> to reset your password.</p>
                     <p>Regards,<br/>
-                    The Global Goal Diggers Team</p>";
+                    The Millionaires Reloaded Team</p>";
 
                     try {
                         $mail->send();
