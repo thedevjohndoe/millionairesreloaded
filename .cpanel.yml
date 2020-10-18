@@ -1,5 +1,5 @@
 ---
     deployment:
         tasks:
-            - export PATH=/home/globalgo/public_html/
+            - export PATH=/home/milliona/public_html/
             - /bin/cp -r * $PATH
